@@ -1,5 +1,8 @@
 package com.branch_deep_linking;
 
+
+import io.branch.rnbranch.RNBranchModule;
+import android.content.Intent;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
 import com.facebook.react.defaults.DefaultNewArchitectureEntryPoint;
@@ -14,6 +17,19 @@ public class MainActivity extends ReactActivity {
   @Override
   protected String getMainComponentName() {
     return "branch_deep_linking";
+  }
+
+
+  @Override
+  protected void onStart() {
+    super.onStart();
+    RNBranchModule.initSession(getIntent().getData(), this);
+  }
+
+  @Override
+  public void onNewIntent(Intent intent) {
+    super.onNewIntent(intent);
+    setIntent(intent);
   }
 
   /**
