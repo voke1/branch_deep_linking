@@ -16,3 +16,4 @@
  - https://blog.logrocket.com/understanding-deep-linking-in-react-native/
 - https://medium.com/react-native-training/deep-linking-your-react-native-app-d87c39a1ad5e
 - https://abhimuralidharan.medium.com/universal-links-in-ios-79c4ee038272
+- https://reactnavigation.org/docs/configuring-links/
